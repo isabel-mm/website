@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Tu Nombre</title>
+    <style>
+        body {
+            display: flex;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            width: 250px;
+            background-color: #2E3440;
+            padding: 20px;
+            height: 100vh;
+            color: white;
+        }
+        nav a {
+            display: block;
+            padding: 10px 0;
+            text-decoration: none;
+            color: white;
+        }
+        nav a:hover {
+            background-color: #4C566A;
+        }
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #5E81AC;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #81A1C1;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Menú</h2>
+        <a href="#home">Inicio</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#congresos">Congresos</a>
+        <a href="#proyectos">Proyectos</a>
+    </nav>
+
+    <div class="content">
+        <section id="home">
+            <h1>Tu Nombre</h1>
+            <p>Bienvenido/a a mi CV en línea. Aquí encontrarás información sobre mis publicaciones, congresos y proyectos.</p>
+            <button class="button" onclick="window.location.href='https://tuenlace.com'">Ver Mis Proyectos/Apps</button>
+        </section>
+        
+        <section id="publicaciones">
+            <h2>Publicaciones</h2>
+            <p>Aquí irán tus publicaciones.</p>
+        </section>
+        
+        <section id="congresos">
+            <h2>Congresos</h2>
+            <p>Aquí irán tus congresos.</p>
+        </section>
+        
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <p>Aquí irán tus proyectos.</p>
+        </section>
+    </div>
+</body>
+</html>
