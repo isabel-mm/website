@@ -6,30 +6,56 @@
     <title>CV - Tu Nombre</title>
     <style>
         body {
-            display: flex;
             margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        nav {
-            width: 250px;
+            font-family: 'Helvetica Neue', sans-serif;
+            color: #D8DEE9;
             background-color: #2E3440;
-            padding: 20px;
-            height: 100vh;
-            color: white;
+            display: flex;
         }
+
+        nav {
+            width: 260px;
+            background-color: #3B4252;
+            padding: 30px;
+            height: 100vh;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        }
+
+        nav h2 {
+            color: #88C0D0;
+            margin-bottom: 20px;
+        }
+
         nav a {
             display: block;
             padding: 10px 0;
+            color: #D8DEE9;
             text-decoration: none;
-            color: white;
+            transition: color 0.3s;
         }
+
         nav a:hover {
-            background-color: #4C566A;
+            color: #81A1C1;
         }
+
         .content {
+            padding: 40px;
             flex-grow: 1;
-            padding: 20px;
+            overflow-y: auto;
         }
+
+        h1 {
+            color: #88C0D0;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            color: #81A1C1;
+        }
+
         .button {
             padding: 10px 20px;
             background-color: #5E81AC;
@@ -37,7 +63,9 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
+
         .button:hover {
             background-color: #81A1C1;
         }
@@ -58,17 +86,17 @@
             <p>Bienvenido/a a mi CV en línea. Aquí encontrarás información sobre mis publicaciones, congresos y proyectos.</p>
             <button class="button" onclick="window.location.href='https://tuenlace.com'">Ver Mis Proyectos/Apps</button>
         </section>
-        
+
         <section id="publicaciones">
             <h2>Publicaciones</h2>
             <p>Aquí irán tus publicaciones.</p>
         </section>
-        
+
         <section id="congresos">
             <h2>Congresos</h2>
             <p>Aquí irán tus congresos.</p>
         </section>
-        
+
         <section id="proyectos">
             <h2>Proyectos</h2>
             <p>Aquí irán tus proyectos.</p>
