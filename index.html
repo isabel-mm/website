@@ -11,6 +11,8 @@
             color: #D8DEE9;
             background-color: #2E3440;
             display: flex;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
         }
 
         nav {
@@ -19,6 +21,7 @@
             padding: 30px;
             height: 100vh;
             box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
         }
 
         nav h2 {
@@ -40,8 +43,9 @@
 
         .content {
             padding: 40px;
+            margin-left: 260px;
             flex-grow: 1;
-            overflow-y: auto;
+            animation: fadeIn 1s ease;
         }
 
         h1 {
@@ -54,6 +58,7 @@
             margin-top: 50px;
             margin-bottom: 20px;
             color: #81A1C1;
+            animation: slideIn 0.8s ease;
         }
 
         .button {
@@ -63,11 +68,36 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
         }
 
         .button:hover {
             background-color: #81A1C1;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-20px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                width: 200px;
+            }
+
+            .content {
+                margin-left: 200px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
