@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicaciones - Isabel</title>
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <title>Publicaciones - Isabel Moyano Moreno</title>
     <style>
         body {
             margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            color: #D8DEE9;
-            background-color: #2E3440;
-            display: flex;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #FFFFFF;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
         nav {
-            width: 260px;
-            background-color: #3B4252;
-            padding: 30px;
-            height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            background-color: #FFC7C7;
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
-        }
-
-        nav h2 {
-            color: #88C0D0;
-            margin-bottom: 20px;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
         }
 
         nav a {
-            display: block;
-            padding: 10px 0;
-            color: #D8DEE9;
+            margin: 0 20px;
+            color: #333;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #81A1C1;
+            color: #FF6F61;
         }
 
         .content {
-            padding: 40px;
-            margin-left: 260px;
-            flex-grow: 1;
+            padding-top: 120px;
+            max-width: 900px;
+            margin: auto;
+            animation: slideIn 1.2s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h1 {
-            color: #88C0D0;
-            font-size: 2.5rem;
+            color: #FF6F61;
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         h3 {
-            color: #81A1C1;
-            margin-top: 40px;
+            color: #FFA726;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #FFC7C7;
         }
 
         ul {
@@ -63,34 +69,78 @@
         }
 
         li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            text-align: justify;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        li:hover {
+            transform: translateX(10px);
         }
 
         a {
-            color: #88C0D0;
+            color: #FF6F61;
             text-decoration: none;
+            font-weight: bold;
         }
 
         a:hover {
             text-decoration: underline;
         }
+
+        footer {
+            background-color: #C8E6C9;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #333;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #388E3C;
+        }
+
+        @media (max-width: 768px) {
+            nav a {
+                margin: 0 10px;
+            }
+
+            .content {
+                padding: 100px 20px;
+            }
+        }
     </style>
 </head>
 <body>
     <nav>
-        <h2>Menú</h2>
-        <a href="index.html">Inicio</a>
-        <a href="publicaciones.html">Publicaciones</a>
-        <a href="index.html#congresos">Congresos</a>
-        <a href="index.html#proyectos">Proyectos</a>
+        <a href=\"index.html\">Inicio</a>
+        <a href=\"pubs.html\">Publicaciones</a>
+        <a href=\"congresos.html\">Congresos</a>
+        <a href=\"proyectos.html\">Proyectos</a>
     </nav>
 
-    <div class="content">
+    <div class=\"content\">
         <h1>Publicaciones</h1>
 
         <h3>🔬 Artículos de revista</h3>
         <ul>
-            <li>Moyano Moreno, Isabel (2023): “<strong>La estilometría como técnica de análisis lingüístico-cuantitativo: a propósito del uso terminológico de estilo</strong>”, <em>Pragmalinguística</em>, Núm. 31, pp. 339-361. <a href="https://doi.org/10.25267/Pragmalinguistica.2023.i31.15">Ver artículo</a></li>
+            <li>Moyano Moreno, Isabel (2023): “<strong>La estilometría como técnica de análisis lingüístico-cuantitativo: a propósito del uso terminológico de estilo</strong>”, <em>Pragmalinguística</em>, Núm. 31, pp. 339-361. <a href=\"https://doi.org/10.25267/Pragmalinguistica.2023.i31.15\">Ver artículo</a></li>
         </ul>
 
         <h3>📚 Capítulos de libro</h3>
@@ -101,9 +151,13 @@
 
         <h3>📝 Reseñas</h3>
         <ul>
-            <li>Moyano Moreno, Isabel (2024): “<strong>Reseña de José Calvo Tello: The Novel in the Spanish Silver Age. A Digital Analysis of Genre Using Machine Learning</strong>”. <em>Philologia Hispalensis</em>, pp. 249-253. <a href="https://revistascientificas.us.es/index.php/PH/article/view/25147">Ver reseña</a></li>
+            <li>Moyano Moreno, Isabel (2024): “<strong>Reseña de José Calvo Tello: The Novel in the Spanish Silver Age. A Digital Analysis of Genre Using Machine Learning</strong>”. <em>Philologia Hispalensis</em>, pp. 249-253. <a href=\"https://revistascientificas.us.es/index.php/PH/article/view/25147\">Ver reseña</a></li>
             <li>Moyano Moreno, Isabel (2022): “<strong>Reseña de Marie-Claude L'Homme: Lexical Semantics for Terminology: An Introduction</strong>”. <em>Lynx: Panorámica de estudios lingüísticos</em>, Núm. 21, pp. 153-158.</li>
         </ul>
     </div>
+
+    <footer>
+        <p>Contacto: <a href=\"mailto:isabel.moyano@uca.es\">isabel.moyano@uca.es</a></p>
+    </footer>
 </body>
 </html>
