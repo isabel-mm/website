@@ -1,18 +1,40 @@
 /* dark-mode.css */
 body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
+    background-color: #333333;
+    color: #E0E0E0;
 }
 
 body.dark-mode nav {
-    background-color: #333333;
+    background-color: #FF6F61; /* Usar un tono más oscuro de tu rosa */
+}
+
+body.dark-mode nav a {
+    color: #F0F0F0;
+}
+
+body.dark-mode nav a:hover {
+    color: #FFC7C7;
 }
 
 body.dark-mode .project-card {
-    background-color: #1e1e1e;
-    color: #ffffff;
+    background-color: #4B4B4B;
+    color: #FFFFFF;
 }
 
 body.dark-mode footer {
-    background-color: #1e1e1e;
+    background-color: #388E3C;
+    color: #E0E0E0;
+}
+
+body.dark-mode footer a {
+    color: #A5D6A7;
+}
+
+body.dark-mode footer a:hover {
+    color: #C8E6C9;
+}
+
+body.dark-mode details {
+    background-color: #444444;
+    color: #F0F0F0;
 }
