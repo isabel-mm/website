@@ -7,73 +7,81 @@
     <style>
         body {
             margin: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            color: #D8DEE9;
-            background-color: #2E3440;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            color: #333;
+            background-color: #FFFFFF;
             display: flex;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
         nav {
-            width: 260px;
-            background-color: #3B4252;
+            width: 240px;
+            background-color: #FFC7C7;
             padding: 30px;
             height: 100vh;
-            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
             position: fixed;
         }
 
         nav h2 {
-            color: #88C0D0;
+            color: #FF6F61;
             margin-bottom: 20px;
+            font-weight: bold;
         }
 
         nav a {
             display: block;
             padding: 10px 0;
-            color: #D8DEE9;
+            color: #333;
             text-decoration: none;
             transition: color 0.3s;
         }
 
         nav a:hover {
-            color: #81A1C1;
+            color: #FF6F61;
         }
 
         .content {
             padding: 40px;
-            margin-left: 260px;
+            margin-left: 240px;
             flex-grow: 1;
             animation: fadeIn 1s ease;
         }
 
         h1 {
-            color: #88C0D0;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
+            color: #FF6F61;
+            font-size: 3rem;
+            margin-bottom: 15px;
         }
 
         h2 {
             margin-top: 50px;
             margin-bottom: 20px;
-            color: #81A1C1;
-            animation: slideIn 0.8s ease;
+            color: #FFA726;
+            border-bottom: 3px solid #FFCC80;
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        p {
+            line-height: 1.6;
         }
 
         .button {
-            padding: 10px 20px;
-            background-color: #5E81AC;
+            padding: 12px 24px;
+            background-color: #FF6F61;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 25px;
             cursor: pointer;
             transition: background-color 0.3s, transform 0.3s;
+            font-weight: bold;
         }
 
         .button:hover {
-            background-color: #81A1C1;
-            transform: scale(1.05);
+            background-color: #FFA726;
+            transform: translateY(-3px);
         }
 
         @keyframes fadeIn {
@@ -81,22 +89,17 @@
             100% { opacity: 1; }
         }
 
-        @keyframes slideIn {
-            0% { transform: translateX(-20px); opacity: 0; }
-            100% { transform: translateX(0); opacity: 1; }
-        }
-
         @media (max-width: 768px) {
             nav {
-                width: 200px;
+                width: 180px;
             }
 
             .content {
-                margin-left: 200px;
+                margin-left: 180px;
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
         }
     </style>
