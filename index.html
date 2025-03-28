@@ -12,6 +12,7 @@
             background-color: #FFFFFF;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            transition: background-color 1s;
         }
 
         nav {
@@ -90,20 +91,15 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        .projects-section {
-            margin-top: 80px;
-            padding: 30px;
-            background-color: #f1f1f1;
-            border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-
         .carousel-container {
             position: relative;
-            width: 100%;
+            width: 300px;
+            height: 300px;
+            margin: auto;
             overflow: hidden;
             margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .carousel-slide {
@@ -112,11 +108,14 @@
         }
 
         .project-card {
-            min-width: 100%;
+            min-width: 300px;
+            height: 300px;
             padding: 20px;
             background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
 
         .project-card a {
@@ -133,20 +132,6 @@
             margin-top: 80px;
         }
 
-        footer p {
-            margin: 5px 0;
-        }
-
-        footer a {
-            color: #333;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        footer a:hover {
-            color: #388E3C;
-        }
     </style>
 </head>
 <body>
@@ -163,21 +148,16 @@
             <div>
                 <h2>¡ H O L A ! 👩🏽‍💻</h2>
                 <p>Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
-                <p>Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021).</p>
-                <p>Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
             </div>
         </div>
 
-        <section class="projects-section">
-            <h2>P R O Y E C T O S + A P P S</h2>
-            <div class="carousel-container">
-                <div class="carousel-slide">
-                    <div class="project-card">
-                        <p>Estas son algunas de mis aplicaciones útiles para iniciarse en lingüística computacional y tratamiento cuantitativo del lenguaje.</p>
-                    </div>
-                    <div class="project-card">
-                        <p><strong>Dataset Creation App</strong>: estructura archivos <code>.txt</code> en formatos <code>.csv</code>, <code>.json</code>, etc. <a href="https://dataset-creation.streamlit.app/" target="_blank">Ver App</a></p>
-                    </div>
+        <section class="carousel-container">
+            <div class="carousel-slide">
+                <div class="project-card">
+                    <p>Estas son algunas de mis aplicaciones útiles para iniciarse en lingüística computacional y tratamiento cuantitativo del lenguaje.</p>
+                </div>
+                <div class="project-card">
+                    <p><strong>Dataset Creation App</strong><br> Estructura archivos .txt en formatos .csv, .json, etc. <a href="https://dataset-creation.streamlit.app/" target="_blank">Ver App</a></p>
                 </div>
             </div>
         </section>
@@ -202,6 +182,12 @@
             const slideWidth = slides[0].clientWidth;
             const carouselSlide = document.querySelector('.carousel-slide');
             carouselSlide.style.transform = `translateX(-${index * slideWidth}px)`;
+
+            if (index === 1) {
+                document.body.style.backgroundColor = '#C8E6C9';
+            } else {
+                document.body.style.backgroundColor = '#FFFFFF';
+            }
             index = (index + 1) % slides.length;
         }
 
