@@ -23,7 +23,7 @@
             top: 0;
             z-index: 1000;
             display: flex;
-            justify-content: center;
+            justify-content: flex-end;
         }
 
         nav a {
@@ -39,18 +39,14 @@
         }
 
         .content {
-            padding: 100px 40px 40px;
+            padding: 120px 60px;
             animation: fadeIn 1s ease;
-        }
-
-        h1 {
-            color: #FF6F61;
-            font-size: 3rem;
-            margin-bottom: 15px;
+            max-width: 800px;
+            margin: auto;
         }
 
         h2 {
-            margin-top: 80px;
+            margin-top: 50px;
             margin-bottom: 20px;
             color: #FFA726;
             border-bottom: 3px solid #FFCC80;
@@ -90,11 +86,7 @@
             }
 
             .content {
-                padding: 120px 20px 20px;
-            }
-
-            h1 {
-                font-size: 2.2rem;
+                padding: 140px 20px 20px;
             }
         }
     </style>
@@ -103,27 +95,16 @@
     <nav>
         <a href=\"#home\">Inicio</a>
         <a href=\"pubs.html\">Publicaciones</a>
-        <a href=\"#congresos\">Congresos</a>
-        <a href=\"#proyectos\">Proyectos</a>
+        <a href=\"congresos.html\">Congresos</a>
+        <a href=\"proyectos.html\">Proyectos</a>
     </nav>
 
     <div class=\"content\">
         <section id=\"home\">
-            <h1>Isabel</h1>
             <h2>Sobre mí</h2>
             <p>¡Hola! 👩🏽‍💻 Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>. Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021). Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
             <p>Además, cuento con experiencia profesional como <strong>lingüista especializada en procesamiento del lenguaje natural</strong> en la empresa <em>Redflag Artificial Intelligence</em>, donde trabajé en traducción, localización y etiquetado semántico de textos. Actualmente, compagino mi investigación doctoral con la participación en diversos <strong>proyectos de investigación relacionados</strong> con la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
             <button class=\"button\" onclick=\"window.location.href='https://tuenlace.com'\">Ver Mis Proyectos/Apps</button>
-        </section>
-
-        <section id=\"congresos\">
-            <h2>Congresos</h2>
-            <p>Aquí irán tus congresos.</p>
-        </section>
-
-        <section id=\"proyectos\">
-            <h2>Proyectos</h2>
-            <p>Aquí irán tus proyectos.</p>
         </section>
     </div>
 </body>
