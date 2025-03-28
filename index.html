@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset=\"UTF-8\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV - Isabel</title>
     <style>
         body {
@@ -27,7 +27,7 @@
         }
 
         nav a {
-            margin: 0 15px;
+            margin: 0 20px;
             color: #333;
             text-decoration: none;
             transition: color 0.3s;
@@ -39,10 +39,15 @@
         }
 
         .content {
-            padding: 120px 60px;
-            animation: fadeIn 1s ease;
-            max-width: 800px;
+            padding: 150px 80px;
+            max-width: 900px;
             margin: auto;
+            animation: slideIn 1.2s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         h2 {
@@ -56,6 +61,13 @@
 
         p {
             line-height: 1.6;
+            opacity: 0;
+            animation: fadeInText 1.8s forwards;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .button {
@@ -74,38 +86,76 @@
             transform: translateY(-3px);
         }
 
-        @keyframes fadeIn {
-            0% { opacity: 0; }
-            100% { opacity: 1; }
+        .projects-section {
+            margin-top: 80px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 40px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.1);
+        }
+
+        footer {
+            background-color: #A2D2FF;
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            margin-top: 80px;
         }
 
         @media (max-width: 768px) {
             nav a {
-                margin: 0 8px;
-                font-size: 0.9rem;
+                margin: 0 10px;
             }
 
             .content {
-                padding: 140px 20px 20px;
+                padding: 140px 20px;
             }
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href=\"#home\">Inicio</a>
-        <a href=\"pubs.html\">Publicaciones</a>
-        <a href=\"congresos.html\">Congresos</a>
-        <a href=\"proyectos.html\">Proyectos</a>
+        <a href="#home">Inicio</a>
+        <a href="pubs.html">Publicaciones</a>
+        <a href="congresos.html">Congresos</a>
+        <a href="proyectos.html">Proyectos</a>
     </nav>
 
-    <div class=\"content\">
-        <section id=\"home\">
+    <div class="content">
+        <section id="home">
             <h2>Sobre mí</h2>
-            <p>¡Hola! 👩🏽‍💻 Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>. Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021). Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
-            <p>Además, cuento con experiencia profesional como <strong>lingüista especializada en procesamiento del lenguaje natural</strong> en la empresa <em>Redflag Artificial Intelligence</em>, donde trabajé en traducción, localización y etiquetado semántico de textos. Actualmente, compagino mi investigación doctoral con la participación en diversos <strong>proyectos de investigación relacionados</strong> con la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
-            <button class=\"button\" onclick=\"window.location.href='https://tuenlace.com'\">Ver Mis Proyectos/Apps</button>
+            <p>¡Hola! 👩🏽‍💻 Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
+            <p>Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021).</p>
+            <p>Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
+            <button class="button" onclick="window.location.href='https://tuenlace.com'">Ver Mis Proyectos/Apps</button>
         </section>
+
+        <section class="projects-section">
+            <h2>Mis Proyectos/Apps recientes</h2>
+            <p>Aquí podrás incluir próximamente un carrusel o listado de tus proyectos recientes.</p>
+        </section>
+
+        <div class="social-icons">
+            <a href="https://twitter.com/issyinthesky"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f311bab7-b344-411b-975e-8a3cffbd4d0d/2928278e-6add-4549-adcf-cca5b86001ed/x-logo-twitter-transparent-logo-download-3.png"></a>
+            <a href="https://scholar.google.com/citations?user=B9Q0w-kAAAAJ"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f311bab7-b344-411b-975e-8a3cffbd4d0d/41f4d2c9-7029-4321-93ed-7f025ef74a8f/480px-Google_Scholar_logo.png"></a>
+            <a href="https://orcid.org/0000-0003-4284-8897"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f311bab7-b344-411b-975e-8a3cffbd4d0d/7bcd30fc-9d9c-4b77-8cb7-a0121df3a965/ORCID_iD.svg.png"></a>
+            <a href="https://dialnet.unirioja.es/"><img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/f311bab7-b344-411b-975e-8a3cffbd4d0d/0fe1301a-cc1d-4f1f-a1f2-7ef6f99bcaec/dialnet-logo.png"></a>
+        </div>
     </div>
+
+    <footer>
+        <p>Contacto: <a href="mailto:isabel.moyano@uca.es">isabel.moyano@uca.es</a></p>
+    </footer>
 </body>
 </html>
