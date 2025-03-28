@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="dark-mode.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Congresos - Isabel Moyano Moreno</title>
@@ -128,6 +129,7 @@
         <a href="./pubs.html">Publicaciones</a>
         <a href="./congresos.html">Congresos</a>
         <a href="./proyectos.html">Proyectos</a>
+        <button id="toggle-dark-mode">Modo Noche</button>
     </nav>
 
     <div class="content">
@@ -175,5 +177,23 @@
             <a href="https://dialnet.unirioja.es/">DIALNET</a>
         </p>
     </footer>
+<script>
+    const toggleButton = document.getElementById('toggle-dark-mode');
+    const body = document.body;
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+        body.classList.add('dark-mode');
+    }
+
+    toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+        } else {
+            localStorage.setItem('dark-mode', 'disabled');
+        }
+    });
+</script>
+
 </body>
 </html>
