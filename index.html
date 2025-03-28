@@ -9,6 +9,7 @@
             margin: 0;
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #333;
+            background-color: #FFFFFF;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
@@ -37,20 +38,90 @@
             color: #FF6F61;
         }
 
-        section {
-            min-height: 100vh;
+        .content {
+            padding-top: 120px;
+            max-width: 900px;
+            margin: auto;
+            animation: slideIn 1.2s ease;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-card {
             display: flex;
             align-items: center;
-            justify-content: center;
-            transition: background-color 1s;
+            gap: 40px;
+            padding: 30px;
         }
 
-        .home {
-            background-color: #FFFFFF;
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
 
-        .projects {
-            background-color: #C8E6C9;
+        h2 {
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            padding-bottom: 5px;
+            text-align: right;
+        }
+
+        h2:hover {
+            background-color: #81C784;
+            color: #FFFFFF;
+        }
+
+        p {
+            line-height: 1.6;
+            animation: fadeInText 1.8s forwards;
+            text-align: justify;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .projects-section {
+            margin-top: 80px;
+            padding: 30px;
+            background-color: #f1f1f1;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .project-card {
+            min-width: 100%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .project-card a {
+            color: #FF6F61;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         footer {
@@ -58,37 +129,58 @@
             padding: 20px;
             text-align: center;
             color: #333;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            margin-top: 80px;
+        }
+
+        footer p {
+            margin: 5px 0;
+        }
+
+        footer a {
+            color: #333;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            color: #388E3C;
         }
     </style>
 </head>
 <body>
     <nav>
-        <a href="#home">Inicio</a>
+        <a href="./index.html">Inicio</a>
         <a href="./pubs.html">Publicaciones</a>
         <a href="./congresos.html">Congresos</a>
         <a href="./proyectos.html">Proyectos</a>
     </nav>
 
-    <section id="home" class="home">
-        <div>
-            <h2 style="text-align: right; font-size: 3rem;">¡ H O L A ! 👩🏽‍💻</h2>
-            <p>Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
-            <p>Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021).</p>
-            <p>Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
+    <div class="content">
+        <div class="profile-card">
+            <img src="https://pbs.twimg.com/profile_images/1875855262839345152/QdnWXdvS_400x400.jpg" alt="Isabel" class="profile-img">
+            <div>
+                <h2>¡ H O L A ! 👩🏽‍💻</h2>
+                <p>Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
+                <p>Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021).</p>
+                <p>Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
+            </div>
         </div>
-    </section>
 
-    <section id="projects" class="projects">
-        <div>
+        <section class="projects-section">
             <h2>P R O Y E C T O S + A P P S</h2>
-            <ul>
-                <li><strong>Dataset Creation App:</strong> estructura archivos <code>.txt</code> en formatos <code>.csv</code>, <code>.json</code>, etc. <a href="https://dataset-creation.streamlit.app/" target="_blank">Ver App</a></li>
-            </ul>
-        </div>
-    </section>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <div class="project-card">
+                        <p>Estas son algunas de mis aplicaciones útiles para iniciarse en lingüística computacional y tratamiento cuantitativo del lenguaje.</p>
+                    </div>
+                    <div class="project-card">
+                        <p><strong>Dataset Creation App</strong>: estructura archivos <code>.txt</code> en formatos <code>.csv</code>, <code>.json</code>, etc. <a href="https://dataset-creation.streamlit.app/" target="_blank">Ver App</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <footer>
         <p>Contacto: <a href="mailto:isabel.moyano@uca.es">isabel.moyano@uca.es</a></p>
@@ -100,5 +192,19 @@
             <a href="https://dialnet.unirioja.es/">DIALNET</a>
         </p>
     </footer>
+
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.project-card');
+
+        function showSlide() {
+            const slideWidth = slides[0].clientWidth;
+            const carouselSlide = document.querySelector('.carousel-slide');
+            carouselSlide.style.transform = `translateX(-${index * slideWidth}px)`;
+            index = (index + 1) % slides.length;
+        }
+
+        setInterval(showSlide, 5000);
+    </script>
 </body>
 </html>
