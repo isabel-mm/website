@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Congresos - Isabel Moyano Moreno</title>
+    <title>Isabel Moyano Moreno</title>
     <style>
         body {
             margin: 0;
@@ -50,42 +50,74 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        h1 {
-            color: #333;
-            text-align: center;
-            margin-bottom: 40px;
+        .profile-card {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            padding: 30px;
         }
 
-        details {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #333;
+            transition: background-color 0.3s, color 0.3s;
+            display: inline-block;
+            padding-bottom: 5px;
+            text-align: right;
+        }
+
+        h2:hover {
+            background-color: #81C784;
+            color: #FFFFFF;
+        }
+
+        p {
+            line-height: 1.6;
+            animation: fadeInText 1.8s forwards;
+            text-align: justify;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .projects-section {
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            padding: 20px;
+            background-color: #fff;
             border-radius: 10px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        details:hover {
-            transform: translateX(10px);
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        summary {
-            font-size: 1.2em;
-            cursor: pointer;
-            color: #333;
+        .project-card a {
+            color: #FF6F61;
+            text-decoration: none;
             font-weight: bold;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0 10px;
-            margin-top: 10px;
-        }
-
-        li {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            text-align: justify;
         }
 
         footer {
@@ -94,10 +126,6 @@
             text-align: center;
             color: #333;
             margin-top: 80px;
-        }
-
-        footer p {
-            margin: 5px 0;
         }
 
         footer a {
@@ -110,16 +138,6 @@
         footer a:hover {
             color: #388E3C;
         }
-
-        @media (max-width: 768px) {
-            nav a {
-                margin: 0 10px;
-            }
-
-            .content {
-                padding: 100px 20px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -129,47 +147,42 @@
         <a href="./congresos.html">Congresos</a>
         <a href="./proyectos.html">Proyectos</a>
     </nav>
-
     <div class="content">
-        <h1>Congresos y conferencias de carácter científico</h1>
+        <div class="profile-card">
+            <img src="https://pbs.twimg.com/profile_images/1875855262839345152/QdnWXdvS_400x400.jpg" alt="Isabel" class="profile-img">
+            <div>
+                <h2>¡ H O L A ! 👩🏽‍💻</h2>
+                <p>Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la ingeniería del lenguaje, la lingüística computacional y la terminología.</p>
+                <p>Me gradué en Lingüística y Lenguas Aplicadas y Estudios Ingleses en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en Comunicación Internacional con especialización en I+D+i (2020-2021).</p>
+                <p>Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
+            </div>
+        </div>
 
-        <details>
-            <summary>📅 2024</summary>
-            <ul>
-                <li>Moyano Moreno, I. y García Cabello de Alba, A. (2024). <strong>Métodos para la recogida de datos en las ciencias del lenguaje: Del corpus a la experimentación</strong>. III Congreso Internacional Tránsitos (Cádiz, España).</li>
-                <li>Moyano Moreno, I. (2024). <strong>Detección semi-automática de neología en Twitter/X: Una base de datos de neologismos potenciales basada en el léxico de la comunidad hispanohablante de streaming</strong>. V Congreso Internacional de Formación Permanente: NODOS DEL CONOCIMIENTO (Online).</li>
-                <li>Moyano Moreno, I. (2024). <strong>De dónde venimos y hacia dónde vamos: cuestiones historiográficas, teóricas y terminológicas en torno a la lingüística de corpus.</strong>. XXXVIII Congreso Internacional de la Asociación de Jóvenes Lingüistas (Santiago de Compostela, España).</li>
-                <li>Moyano Moreno, I. y Crespo Miguel, M. (2024). <strong>Tendencias actuales en la intersección terminografía-inteligencia artificial</strong>. 41º Congreso Internacional de la Sociedad Española de Lingüística Aplicada (Valencia, España).</li>
-                <li>Moyano Moreno, I. (2024). <strong>Hybrid approaches to Automatic Term Extraction in the Linguistics domain</strong>. 41º Congreso Internacional de la Sociedad Española de Lingüística Aplicada (Valencia, España).</li>
-            </ul>
-        </details>
-
-        <details>
-            <summary>📅 2023</summary>
-            <ul>
-                <li>Moyano Moreno, I. (2023). <strong>Extracción semi-automática de términos vinculada a los contenidos actuales de la Lingüística de corpus</strong>. XV Congreso de Lingüística General (Madrid, España).</li>
-                <li>Moyano Moreno, I. y García Cabello de Alba, A. (2023). <strong>Procesamiento y producción flexiva de neologismos en Twitter</strong>. 40º Congreso Internacional de la Sociedad Española de Lingüística Aplicada (Mérida, España).</li>
-                <li>Moyano Moreno, I. y García Cabello de Alba, A. (2023). <strong>Propuesta metodológica desde el procesamiento del lenguaje natural para la creación de un corpus de neologismos: El habla coloquial en Twitter</strong>. 40º Congreso Internacional de la Sociedad Española de Lingüística Aplicada (Mérida, España).</li>
-                <li>Moyano Moreno, I. y García Cabello de Alba, A. (2023). <strong>(2023) "Extracción semi-automática de términos vinculada a los contenidos y perspectivas actuales de la Fraseología.</strong>. XXIII Congreso Internacional de la Asociación Alemana de Hispanistas (Graz, Austria).</li>
-
-            </ul>
-        </details>
-
-        <details>
-            <summary>📅 2022</summary>
-            <ul>
-                <li>Moyano Moreno, I. (2022). <strong>Humanidades digitales y estilometría</strong>. VI Congreso de Lingüística y Literatura (Santander, España).</li>
-                <li>Moyano Moreno, I. (2022). <strong>Detección de relaciones semánticas entre términos metalingüísticos</strong>. XIII International Corpus Linguistics Conference (Bérgamo, Italia).</li>
-            </ul>
-        </details>
-
+        <section class="projects-section">
+            <h2>P R O Y E C T O S + A P P S</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <p><strong>Dataset Creation App</strong></p>
+                    <p>Estructura archivos .txt en formatos .csv, .json, etc.</p>
+                    <a href="https://dataset-creation.streamlit.app/" target="_blank">Ver App</a>
+                </div>
+                <div class="project-card">
+                    <p><strong>Otro Proyecto</strong></p>
+                    <p>Descripción breve del proyecto que deseas mostrar.</p>
+                    <a href="#">Ver Proyecto</a>
+                </div>
+            </div>
+        </section>
     </div>
 
     <footer>
-        <p>Contacto: <a href="mailto:isabel.moyano@uca.es">isabel.moyano@uca.es</a></p>
         <p>
-            <a href="https://twitter.com/issyinthesky">TWITTER</a>
-            <a href="https://linkedin.com">LINKEDIN</a>
+            <a href="mailto:isabel.moyano@uca.es">MAIL</a> · 
+            <a href="https://twitter.com/issyinthesky">TWITTER</a> · 
+            <a href="https://linkedin.com">LINKEDIN</a> · 
+            <a href="https://scholar.google.com/citations?user=B9Q0w-kAAAAJ">GOOGLE SCHOLAR</a> · 
+            <a href="https://orcid.org/0000-0003-4284-8897">ORCID</a> · 
+            <a href="https://dialnet.unirioja.es/">DIALNET</a>
         </p>
     </footer>
 </body>
