@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset=\"UTF-8\">
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">
     <title>CV - Isabel</title>
     <style>
         body {
@@ -10,32 +10,28 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             color: #333;
             background-color: #FFFFFF;
-            display: flex;
             overflow-x: hidden;
             scroll-behavior: smooth;
         }
 
         nav {
-            width: 240px;
             background-color: #FFC7C7;
-            padding: 30px;
-            height: 100vh;
-            box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: fixed;
-        }
-
-        nav h2 {
-            color: #FF6F61;
-            margin-bottom: 20px;
-            font-weight: bold;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
         }
 
         nav a {
-            display: block;
-            padding: 10px 0;
+            margin: 0 15px;
             color: #333;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -43,9 +39,7 @@
         }
 
         .content {
-            padding: 40px;
-            margin-left: 240px;
-            flex-grow: 1;
+            padding: 100px 40px 40px;
             animation: fadeIn 1s ease;
         }
 
@@ -56,7 +50,7 @@
         }
 
         h2 {
-            margin-top: 50px;
+            margin-top: 80px;
             margin-bottom: 20px;
             color: #FFA726;
             border-bottom: 3px solid #FFCC80;
@@ -90,12 +84,13 @@
         }
 
         @media (max-width: 768px) {
-            nav {
-                width: 180px;
+            nav a {
+                margin: 0 8px;
+                font-size: 0.9rem;
             }
 
             .content {
-                margin-left: 180px;
+                padding: 120px 20px 20px;
             }
 
             h1 {
@@ -106,28 +101,27 @@
 </head>
 <body>
     <nav>
-        <h2>Menú</h2>
-        <a href="index.html#home">Inicio</a>
-        <a href="pubs.html">Publicaciones</a>
-        <a href="index.html#congresos">Congresos</a>
-        <a href="index.html#proyectos">Proyectos</a>
+        <a href=\"#home\">Inicio</a>
+        <a href=\"pubs.html\">Publicaciones</a>
+        <a href=\"#congresos\">Congresos</a>
+        <a href=\"#proyectos\">Proyectos</a>
     </nav>
 
-    <div class="content">
-        <section id="home">
+    <div class=\"content\">
+        <section id=\"home\">
             <h1>Isabel</h1>
             <h2>Sobre mí</h2>
             <p>¡Hola! 👩🏽‍💻 Soy Isabel, investigadora predoctoral FPU en la Universidad de Cádiz, donde desarrollo mi tesis doctoral centrada en la <strong>ingeniería del lenguaje</strong>, la <strong>lingüística computacional</strong> y la <strong>terminología</strong>. Me gradué en <em>Lingüística y Lenguas Aplicadas</em> y <em>Estudios Ingleses</em> en la Universidad de Cádiz (2015-2020) y realicé un Máster Universitario en <em>Comunicación Internacional</em> con especialización en <em>I+D+i</em> (2020-2021). Mi investigación actual se enfoca en la creación de un extractor automático de términos aplicados al dominio de la lingüística, buscando desarrollar herramientas computacionales que optimicen este tipo de procesos terminográficos.</p>
             <p>Además, cuento con experiencia profesional como <strong>lingüista especializada en procesamiento del lenguaje natural</strong> en la empresa <em>Redflag Artificial Intelligence</em>, donde trabajé en traducción, localización y etiquetado semántico de textos. Actualmente, compagino mi investigación doctoral con la participación en diversos <strong>proyectos de investigación relacionados</strong> con la <strong>lingüística computacional</strong> y la <strong>terminología</strong>.</p>
-            <button class="button" onclick="window.location.href='https://tuenlace.com'">Ver Mis Proyectos/Apps</button>
+            <button class=\"button\" onclick=\"window.location.href='https://tuenlace.com'\">Ver Mis Proyectos/Apps</button>
         </section>
 
-        <section id="congresos">
+        <section id=\"congresos\">
             <h2>Congresos</h2>
             <p>Aquí irán tus congresos.</p>
         </section>
 
-        <section id="proyectos">
+        <section id=\"proyectos\">
             <h2>Proyectos</h2>
             <p>Aquí irán tus proyectos.</p>
         </section>
