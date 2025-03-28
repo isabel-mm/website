@@ -1,0 +1,18 @@
+/* dark-mode.css */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode nav {
+    background-color: #333333;
+}
+
+body.dark-mode .project-card {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode footer {
+    background-color: #1e1e1e;
+}
