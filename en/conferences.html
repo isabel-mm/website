@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conferences | Isabel Moyano</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../dark-mode.css" />
+</head>
+<body>
+  <div class="wrapper">
+    <div data-include="../components/navbar.html"></div>
+
+    <div class="content">
+      <h1>Scientific Conferences and Presentations</h1>
+
+      <details>
+        <summary>🗓️ 2024</summary>
+        <ul>
+          <li>Moyano Moreno, I. & García Cabello de Alba, A. (2024). <strong>Métodos para la recogida de datos en las ciencias del lenguaje: Del corpus a la experimentación</strong> [Data Collection Methods in Language Sciences: From Corpus to Experimentation]. III Congreso Internacional Tránsitos (Cádiz, Spain).</li>
+          <li>Moyano Moreno, I. (2024). <strong>Detección semi-automática de neología en Twitter/X: Una base de datos de neologismos potenciales basada en el léxico de la comunidad hispanohablante de streaming</strong> [Semi-automatic Neologism Detection on Twitter/X: A Database Based on the Lexicon of the Spanish-speaking Streaming Community]. V Congreso Internacional de Formación Permanente: NODOS DEL CONOCIMIENTO (Online).</li>
+          <li>Moyano Moreno, I. (2024). <strong>De dónde venimos y hacia dónde vamos: cuestiones historiográficas, teóricas y terminológicas en torno a la lingüística de corpus</strong> [Where We Come From and Where We Are Going: Historiographical, Theoretical and Terminological Issues in Corpus Linguistics]. XXXVIII Congreso Internacional de la Asociación de Jóvenes Lingüistas (Santiago de Compostela, Spain).</li>
+          <li>Moyano Moreno, I. & Crespo Miguel, M. (2024). <strong>Tendencias actuales en la intersección terminografía-inteligencia artificial</strong> [Current Trends at the Intersection of Terminography and Artificial Intelligence]. 41st International Conference of the Spanish Society of Applied Linguistics (Valencia, Spain).</li>
+          <li>Moyano Moreno, I. (2024). <strong>Hybrid approaches to Automatic Term Extraction in the Linguistics domain</strong>. 41st International Conference of the Spanish Society of Applied Linguistics (Valencia, Spain).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>🗓️ 2023</summary>
+        <ul>
+          <li>Moyano Moreno, I. (2023). <strong>Extracción semi-automática de términos vinculada a los contenidos actuales de la Lingüística de corpus</strong> [Semi-automatic Term Extraction Related to Current Contents in Corpus Linguistics]. XV Congreso de Lingüística General (Madrid, Spain).</li>
+          <li>Moyano Moreno, I. & García Cabello de Alba, A. (2023). <strong>Procesamiento y producción flexiva de neologismos en Twitter</strong> [Processing and Inflectional Production of Neologisms on Twitter]. 40th International Conference of the Spanish Society of Applied Linguistics (Mérida, Spain).</li>
+          <li>Moyano Moreno, I. & García Cabello de Alba, A. (2023). <strong>Propuesta metodológica desde el procesamiento del lenguaje natural para la creación de un corpus de neologismos: El habla coloquial en Twitter</strong> [A Methodological Proposal from Natural Language Processing for the Creation of a Neologism Corpus: Colloquial Speech on Twitter]. 40th International Conference of the Spanish Society of Applied Linguistics (Mérida, Spain).</li>
+          <li>Moyano Moreno, I. & García Cabello de Alba, A. (2023). <strong>Extracción semi-automática de términos vinculada a los contenidos y perspectivas actuales de la Fraseología</strong> [Semi-automatic Term Extraction Related to Current Contents and Perspectives in Phraseology]. XXIII Congreso Internacional de la Asociación Alemana de Hispanistas (Graz, Austria).</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>🗓️ 2022</summary>
+        <ul>
+          <li>Moyano Moreno, I. (2022). <strong>Humanidades digitales y estilometría</strong> [Digital Humanities and Stylometry]. VI Congreso de Lingüística y Literatura (Santander, Spain).</li>
+          <li>Moyano Moreno, I. (2022). <strong>Detección de relaciones semánticas entre términos metalingüísticos</strong> [Detection of Semantic Relations Between Metalinguistic Terms]. XIII International Corpus Linguistics Conference (Bergamo, Italy).</li>
+        </ul>
+      </details>
+    </div>
+
+    <div data-include="../components/footer.html"></div>
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script>
+    const toggleButton = document.getElementById('toggle-dark-mode');
+    const body = document.body;
+
+    if (localStorage.getItem('dark-mode') === 'enabled') {
+      body.classList.add('dark-mode');
+    }
+
+    if (toggleButton) {
+      toggleButton.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        localStorage.setItem(
+          'dark-mode',
+          body.classList.contains('dark-mode') ? 'enabled' : 'disabled'
+        );
+      });
+    }
+  </script>
+</body>
+</html>

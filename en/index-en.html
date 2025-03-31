@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Isabel Moyano</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <div data-include="../components/navbar.html"></div>
+
+    <div class="content">
+      <div class="profile-card">
+        <img src="https://pbs.twimg.com/profile_images/1875855262839345152/QdnWXdvS_400x400.jpg" alt="Isabel" class="profile-img">
+        <div>
+          <h2>H E L L O ! 👩🏽‍💻</h2>
+          <p>I'm Isabel, a PhD candidate (FPU) at the University of Cádiz. My research focuses on <strong>Language Engineering</strong>, <strong>Computational Linguistics</strong> and <strong>Terminology</strong>.</p>
+          <p>I hold degrees in <em>Linguistics and Applied Languages</em> and <em>English Studies</em> from the University of Cádiz (2015–2020), and a Master's in <em>International Communication</em> specialising in <em>R&D&I</em> (2020–2021).</p>
+          <p>My current work involves developing an automatic term extractor tailored to the field of linguistics, aiming to create computational tools that improve terminographic processes.</p>
+        </div>
+      </div>
+
+      <section class="projects-section">
+        <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 900px; margin: auto; margin-top: 40px;">
+
+          <!-- Column 1: Featured App -->
+          <div style="flex: 1; min-width: 280px; max-width: 400px; text-align: center;">
+            <h2 style="transition: background-color 0.3s, color 0.3s; display: inline-block; padding-bottom: 5px;">N E W ⚙️</h2>
+            <h3 style="color: #FF6F61; margin-top: 0;">TXT to JSON, CSV, XML Converter</h3>
+            <p style="text-align: justify;">
+              Turn plain text into structured formats for your analysis: JSON, JSONL, CSV or XML. Designed for corpora, NLP and linguistic data extraction.
+            </p>
+            <a href="https://dataset-creation.streamlit.app/" target="_blank"
+              style="font-weight: bold; text-decoration: none; padding: 8px 16px; background-color: #FFC7C7; color: #333; border-radius: 8px; display: inline-block; margin-top: 10px;">
+              Try the app
+            </a>
+          </div>
+
+          <!-- Column 2: GitHub link -->
+          <div style="flex: 1; min-width: 280px; max-width: 400px; text-align: center;">
+            <h2 style="transition: background-color 0.3s, color 0.3s; display: inline-block; padding-bottom: 5px;">... M O R E 🤖</h2>
+            <div style="text-align: center; margin-top: 20px;">
+              <a href="https://github.com/isabel-mm" target="_blank" style="
+                display: inline-block;
+                padding: 10px 18px;
+                background-color: #333;
+                color: #fff;
+                font-weight: bold;
+                border-radius: 8px;
+                text-decoration: none;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+              ">
+                See my projects on GitHub →
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div data-include="../components/footer.html"></div>
+  </div>
+
+  <script src="../js/include.js"></script>
+  <script src="../js/github-card.js"></script>
+</body>
+</html>
