@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Apps | Isabel Moyano Moreno</title>
-  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
   <style>
     .apps-grid {
       display: grid;
@@ -62,6 +62,7 @@
 </head>
 <body>
   <div class="wrapper">
+
     <!-- NAVBAR -->
     <div data-include="components/navbar.html"></div>
 
@@ -81,37 +82,36 @@
           </div>
         </div>
       </div>
+
+      <hr style="margin: 60px 0; border: none; border-top: 2px solid #FFC7C7;" />
+
+      <h2 style="text-align: center; color: #FF6F61;">Proyectos en marcha / futuros</h2>
+
+      <div class="apps-grid">
+        <!-- Proyecto futuro 1 -->
+        <div class="app-card">
+          <h3>Explorador de términos por dominio</h3>
+          <p>Una app que permitirá subir un corpus y visualizar automáticamente términos clave por subdominios temáticos, con gráficos interactivos.</p>
+          <div class="btn-group">
+            <span style="font-weight: bold; color: #999;">En desarrollo</span>
+          </div>
+        </div>
+
+        <!-- Proyecto futuro 2 -->
+        <div class="app-card">
+          <h3>Generador de datasets anotados</h3>
+          <p>Una herramienta para crear datasets anotados desde textos en bruto usando plantillas NER personalizables. Pensada para docentes e investigadores.</p>
+          <div class="btn-group">
+            <span style="font-weight: bold; color: #999;">En diseño</span>
+          </div>
+        </div>
+      </div>
     </div>
-
-<hr style="margin: 60px 0; border: none; border-top: 2px solid #FFC7C7;" />
-
-<h2 style="text-align: center; color: #FF6F61;">Proyectos en marcha / futuros</h2>
-
-<div class="apps-grid">
-  <!-- Proyecto futuro 1 -->
-  <div class="app-card">
-    <h3>Explorador de términos por dominio</h3>
-    <p>Una app que permitirá subir un corpus y visualizar automáticamente términos clave por subdominios temáticos, con gráficos interactivos.</p>
-    <div class="btn-group">
-      <span style="font-weight: bold; color: #999;">En desarrollo</span>
-    </div>
-  </div>
-
-  <!-- Proyecto futuro 2 -->
-  <div class="app-card">
-    <h3>Generador de datasets anotados</h3>
-    <p>Una herramienta para crear datasets anotados desde textos en bruto usando plantillas NER personalizables. Pensada para docentes e investigadores.</p>
-    <div class="btn-group">
-      <span style="font-weight: bold; color: #999;">En diseño</span>
-    </div>
-  </div>
-</div>
-
 
     <!-- FOOTER -->
     <div data-include="components/footer.html"></div>
   </div>
 
-  <script src="js/include.js"></script>
+  <script src="../js/include.js"></script>
 </body>
 </html>
