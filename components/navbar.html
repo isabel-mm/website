@@ -1,59 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Isabel Moyano</title>
-  <link rel="stylesheet" href="../css/style.css">
-  <style>
-    nav {
-      flex-wrap: wrap;
-      padding-right: 20px;
-    }
+<nav>
+  <a href="./index.html">Inicio</a>
+  <a href="./apps.html">Apps</a>
 
-    .language-switch {
-      margin-left: auto;
-      white-space: nowrap;
-    }
-
-    @media (max-width: 768px) {
-      .language-switch {
-        margin-left: 0;
-        margin-top: 10px;
-        order: 3;
-      }
-    }
-  </style>
-</head>
-<body>
-  <nav>
-    <a href="index-en.html">Home</a>
-    <a href="apps-en.html">Apps</a>
-
-    <div class="dropdown">
-      <a class="dropbtn" onclick="toggleDropdown()">Academic CV ▾</a>
-      <div class="dropdown-content" id="dropdownMenu">
-        <a href="research.html">Research</a>
-        <a href="conferences.html">Conferences</a>
-        <a href="projects.html">Projects</a>
-      </div>
+  <div class="dropdown">
+    <a class="dropbtn" onclick="toggleDropdown()">CV académico ▾</a>
+    <div class="dropdown-content" id="dropdownMenu">
+      <a href="es/publicaciones.html">Publicaciones</a>
+      <a href="es/congresos.html">Congresos</a>
+      <a href="es/proyectos.html">Proyectos</a>
     </div>
+  </div>
 
-    <a href="../index.html" class="language-switch">🌐 Español</a>
-  </nav>
-
-  <script>
-    function toggleDropdown() {
-      document.getElementById("dropdownMenu").classList.toggle("show");
-    }
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        const dropdowns = document.getElementsByClassName("dropdown-content");
-        for (let i = 0; i < dropdowns.length; i++) {
-          dropdowns[i].classList.remove('show');
-        }
-      }
-    };
-  </script>
-</body>
-</html>
+  <a href="./en/index-en.html" style="margin-left: auto;">🌐 English</a>
+</nav>
