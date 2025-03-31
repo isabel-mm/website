@@ -1,148 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicaciones - Isabel Moyano Moreno</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            color: #333;
-            background-color: #FFFFFF;
-            overflow-x: hidden;
-            scroll-behavior: smooth;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publicaciones - Isabel Moyano Moreno</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-        nav {
-            background-color: #FFC7C7;
-            padding: 15px 30px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: center;
-            text decoration: none;
-        }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: #333;
+      background-color: #FFFFFF;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
 
-        nav a {
-            margin: 0 20px;
-            color: #333;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-weight: bold;
-        }
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
-        nav a:hover {
-            color: #FF6F61;
-            text-decoration: none;
-        }
+    nav {
+      background-color: #FFC7C7;
+      padding: 15px 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+    }
 
-        .content {
-            padding-top: 120px;
-            max-width: 900px;
-            margin: auto;
-            animation: slideIn 1.2s ease;
-        }
+    nav a {
+      margin: 0 20px;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+      font-weight: bold;
+    }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    nav a:hover {
+      color: #FF6F61;
+    }
 
-        h1 {
-            color: #FF6F61;
-            text-align: center;
-            margin-bottom: 40px;
-        }
+    .content {
+      padding-top: 120px;
+      max-width: 900px;
+      margin: auto;
+      animation: slideIn 1.2s ease;
+      flex: 1;
+    }
 
-        details {
-            margin-bottom: 20px;
-            padding: 10px;
-            background-color: #f9f9f9;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        details:hover {
-            transform: translateX(10px);
-        }
+    h1 {
+      color: #FF6F61;
+      text-align: center;
+      margin-bottom: 40px;
+    }
 
-        summary {
-            font-size: 1.2em;
-            cursor: pointer;
-            color: #333;
-            font-weight: bold;
-        }
+    details {
+      margin-bottom: 20px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
 
-        ul {
-            list-style: none;
-            padding: 0 10px;
-            margin-top: 10px;
-        }
+    details:hover {
+      transform: translateX(10px);
+    }
 
-        li {
-            margin-bottom: 15px;
-            line-height: 1.6;
-            text-align: justify;
-        }
+    summary {
+      font-size: 1.2em;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+    }
 
-        a {
-            color: #FF6F61;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    ul {
+      list-style: none;
+      padding: 0 10px;
+      margin-top: 10px;
+    }
 
-        a:hover {
-            text-decoration: none;
-        }
+    li {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
 
-        footer {
-            background-color: #C8E6C9;
-            padding: 20px;
-            text-align: center;
-            color: #333;
-            margin-top: 80px;
-        }
+    a {
+      color: #FF6F61;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        footer p {
-            margin: 5px 0;
-            text decoration: none;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        footer a {
-            color: #333;
-            margin: 0 10px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    footer {
+      background-color: #C8E6C9;
+      padding: 20px;
+      text-align: center;
+      color: #333;
+    }
 
-        footer a:hover {
-            color: #388E3C;
-            text decoration: none;
-        }
+    footer a {
+      color: #333;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-        @media (max-width: 768px) {
-            nav a {
-                margin: 0 10px;
-            }
+    footer a:hover {
+      color: #388E3C;
+    }
 
-            .content {
-                padding: 100px 20px;
-            }
-        }
-    </style>
+    @media (max-width: 768px) {
+      nav a {
+        margin: 0 10px;
+      }
+
+      .content {
+        padding: 100px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <nav>
-        <a href="./index.html">Inicio</a>
-        <a href="./pubs.html">Publicaciones</a>
-        <a href="./congresos.html">Congresos</a>
-        <a href="./proyectos.html">Proyectos</a>
-    </nav>
+  <div class="wrapper">
+    <div data-include="components/navbar.html"></div>
 
 <div class="content">
     <h1 style="color: #333;">Publicaciones</h1>
@@ -174,15 +173,9 @@
     </details>
 </div>
 
-    <footer>
-        <p>
-            <a href="mailto:isabel.moyano@uca.es">E-MAIL</a> · 
-            <a href="https://twitter.com/issyinthesky">TWITTER</a> · 
-            <a href="https://linkedin.com">LINKEDIN</a> · 
-            <a href="https://scholar.google.com/citations?user=B9Q0w-kAAAAJ">GOOGLE SCHOLAR</a> · 
-            <a href="https://orcid.org/0000-0003-4284-8897">ORCID</a> · 
-            <a href="https://dialnet.unirioja.es/">DIALNET</a>
-        </p>
-    </footer>
+    <div data-include="components/footer.html"></div>
+  </div>
+
+  <script src="js/include.js"></script>
 </body>
 </html>
