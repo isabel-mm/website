@@ -43,7 +43,9 @@ nav {
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* 🔁 Permite pasar a varias líneas si hace falta */
+  justify-content: center; /* ✅ Centra los enlaces */
+  gap: 10px; /* 🌼 Espaciado entre enlaces */
 }
 
 /* Enlaces normales y botón desplegable */
