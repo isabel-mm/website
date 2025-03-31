@@ -24,32 +24,44 @@
     </div>
 
 <section class="projects-section">
-  <div class="profile-card" style="flex-direction: column; align-items: center; text-align: center; max-width: 800px; margin: auto;">
-    
-    <!-- Badge tipo NEW -->
-    <span style="
-      background-color: #FF6F61;
-      color: white;
-      font-weight: bold;
-      font-size: 0.9em;
-      letter-spacing: 2px;
-      padding: 6px 12px;
-      border-radius: 20px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    ">N E W  🔧</span>
+  <div style="display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; max-width: 900px; margin: auto; margin-top: 40px;">
 
-    <h3 style="margin: 0; color: #FF6F61;">Conversor de TXT a JSON, CSV, XML...</h3>
+    <!-- Columna 1: App destacada -->
+    <div style="flex: 1; min-width: 280px; max-width: 400px; text-align: center;">
+      <span style="
+        background-color: #FF6F61;
+        color: white;
+        font-weight: bold;
+        font-size: 0.9em;
+        letter-spacing: 2px;
+        padding: 6px 12px;
+        border-radius: 20px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        display: inline-block;
+        margin-bottom: 10px;
+      ">N E W  ⚙️</span>
 
-    <p style="text-align: justify; max-width: 600px; margin-top: 10px;">
-      Herramienta para convertir archivos .txt en datos estructurados listos para ser procesados automáticamente (JSON, JSONL, CSV, XML).
-      Útil en tareas de PLN, terminología o análisis de corpus.
-    </p>
+      <h3 style="color: #FF6F61; margin-top: 0;">Conversor de TXT a JSON, CSV, XML...</h3>
+      <p style="text-align: justify;">
+        Convierte textos planos en estructuras procesables para tus análisis: JSON, JSONL, CSV o XML. Pensado para corpus, PLN y extracción de datos lingüísticos.
+      </p>
+      <a href="https://dataset-creation.streamlit.app/" target="_blank"
+        style="font-weight: bold; text-decoration: none; padding: 8px 16px; background-color: #FFC7C7; color: #333; border-radius: 8px; display: inline-block; margin-top: 10px;">
+        Probar app
+      </a>
+    </div>
 
-    <a href="https://dataset-creation.streamlit.app/" target="_blank"
-      style="margin-top: 15px; font-weight: bold; text-decoration: none; padding: 10px 20px; background-color: #FFC7C7; color: #333; border-radius: 8px;">
-      Probar app
-    </a>
+    <!-- Columna 2: GitHub embedido -->
+    <div style="flex: 1; min-width: 280px; max-width: 400px; text-align: center;">
+      <h3 style="color: #333;">Mi GitHub</h3>
+      <iframe src="https://github-readme-stats.vercel.app/api?username=isabel-mm&show_icons=true&theme=default&hide_title=true" 
+        width="100%" height="170" style="border: none;"></iframe>
+      <a href="https://github.com/isabel-mm" target="_blank"
+        style="display: inline-block; margin-top: 10px; font-weight: bold; color: #FF6F61; text-decoration: none;">
+        Visitar perfil
+      </a>
+    </div>
+
   </div>
 </section>
 
