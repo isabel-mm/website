@@ -65,26 +65,29 @@ nav a:hover, .dropbtn:hover {
 }
 
 .dropbtn {
-  cursor: pointer;
   font-weight: bold;
-  padding: 0 20px;
   color: #333;
+  padding: 0 20px;
+  cursor: pointer;
+  display: inline-block;
   transition: color 0.3s;
 }
 
-.dropbtn:hover {
-  color: #FF6F61;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%; /* justo debajo del botón */
+  left: 0;
   background-color: #fff;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1001;
   border-radius: 5px;
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .dropdown-content a {
@@ -98,12 +101,6 @@ nav a:hover, .dropbtn:hover {
 .dropdown-content a:hover {
   background-color: #f1f1f1;
   color: #FF6F61;
-}
-
-/* ✅ Esto evita que desaparezca al mover el ratón */
-.dropdown:hover .dropdown-content,
-.dropdown:focus-within .dropdown-content {
-  display: block;
 }
 
 
