@@ -55,6 +55,9 @@ nav a, .dropbtn {
   transition: color 0.3s;
   font-weight: bold;
   cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 nav a:hover, .dropbtn:hover {
