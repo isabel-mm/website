@@ -4,14 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Congresos - Isabel Moyano Moreno</title>
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="dark-mode.css" />
+  <link rel="stylesheet" href="/website/css/style.css" />
+  <link rel="stylesheet" href="/website/dark-mode.css" />
 </head>
 <body>
   <div class="wrapper">
-    <!-- Navbar modular -->
-    <div data-include="components/navbar.html"></div>
-
+    <!-- ✅ Navbar modular desde /es/components -->
+    <div data-include="/website/es/components/navbar.html"></div>
+    
     <div class="content">
         <h1>Congresos y conferencias de carácter científico</h1>
 
@@ -47,12 +47,13 @@
 
     </div>
 
-    <!-- Footer modular -->
-    <div data-include="components/footer.html"></div>
+
+    <!-- ✅ Footer modular desde /es/components -->
+    <div data-include="/website/es/components/footer.html"></div>
   </div>
 
-  <!-- Scripts -->
-  <script src="js/include.js"></script>
+  <!-- ✅ Scripts -->
+  <script src="/website/js/include.js"></script>
   <script>
     const toggleButton = document.getElementById('toggle-dark-mode');
     const body = document.body;
