@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apps | Isabel Moyano Moreno</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .app-card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .app-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .app-card h3 {
+      margin-top: 0;
+      font-size: 1.2em;
+      color: #FF6F61;
+    }
+
+    .app-card p {
+      font-size: 0.95em;
+      text-align: justify;
+      line-height: 1.4;
+    }
+
+    .app-card .btn-group {
+      margin-top: 15px;
+      display: flex;
+      gap: 10px;
+    }
+
+    .app-card a {
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 12px;
+      border-radius: 6px;
+      background-color: #FFC7C7;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .app-card a:hover {
+      background-color: #FF6F61;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <!-- NAVBAR -->
+    <div data-include="components/navbar.html"></div>
+
+    <div class="content">
+      <h1>Apps y herramientas personales</h1>
+      <p style="text-align: justify;">
+        Aquí publico pequeños proyectos personales y fragmentos de código que me ayudan en tareas cotidianas de investigación. Si también trabajas con corpus, terminología o lingüística computacional, quizás te resulten útiles.
+      </p>
+
+      <div class="apps-grid">
+        <!-- App 1 -->
+        <div class="app-card">
+          <h3>Contador de términos</h3>
+          <p>Detecta automáticamente candidatos a término y los ordena por frecuencia. Útil para iniciar un proceso de extracción terminológica.</p>
+          <div class="btn-group">
+            <a href="apps/termino-contador.html">Probar</a>
+            <a href="https://github.com/tuusuario/termino-contador">Código</a>
+          </div>
+        </div>
+
+        <!-- App 2 -->
+        <div class="app-card">
+          <h3>Clasificador temático</h3>
+          <p>Clasifica textos según subcampos de la lingüística. Entrenado con corpus especializados.</p>
+          <div class="btn-group">
+            <a href="apps/clasificador.html">Probar</a>
+            <a href="https://github.com/tuusuario/clasificador-linguistica">Código</a>
+          </div>
+        </div>
+
+        <!-- App 3 -->
+        <div class="app-card">
+          <h3>Conversor XML → TXT</h3>
+          <p>Convierte archivos XML-TEI en texto plano para facilitar la exploración o anotación posterior.</p>
+          <div class="btn-group">
+            <a href="apps/xml-to-txt.html">Probar</a>
+            <a href="https://github.com/tuusuario/xml-extractor">Código</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div data-include="components/footer.html"></div>
+  </div>
+
+  <script src="js/include.js"></script>
+</body>
+</html>
