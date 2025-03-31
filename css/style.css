@@ -46,14 +46,17 @@ nav {
   justify-content: center;
 }
 
+/* Enlaces normales y botón desplegable */
 nav a, .dropbtn {
   margin: 0 20px;
   color: #333;
   text-decoration: none;
   transition: color 0.3s;
   font-weight: bold;
+  cursor: pointer;
 }
 
+/* Hover para enlaces y botón */
 nav a:hover, .dropbtn:hover {
   color: #FF6F61;
 }
@@ -64,32 +67,27 @@ nav a:hover, .dropbtn:hover {
   display: inline-block;
 }
 
+/* Estilo del botón desplegable como enlace */
 .dropbtn {
-  font-weight: bold;
-  color: #333;
-  padding: 0 20px;
-  cursor: pointer;
   display: inline-block;
-  transition: color 0.3s;
+  padding: 0 20px;
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
+/* Contenedor del menú */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%; /* justo debajo del botón */
+  top: 100%; /* Justo debajo del botón */
   left: 0;
+  margin-top: 0; /* Eliminamos separación para evitar hueco */
   background-color: #fff;
   min-width: 180px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   z-index: 1001;
   border-radius: 5px;
-  margin-top: 10px;
 }
 
+/* Enlaces dentro del menú */
 .dropdown-content a {
   color: #333;
   padding: 10px 15px;
@@ -103,6 +101,10 @@ nav a:hover, .dropbtn:hover {
   color: #FF6F61;
 }
 
+/* Mostrar el menú al pasar por el contenedor */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Footer */
 footer {
