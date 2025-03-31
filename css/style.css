@@ -119,11 +119,23 @@ footer a {
   margin: 0 10px;
   text-decoration: none;
   font-weight: bold;
+  white-space: nowrap;
+}
+
 }
 
 footer a:hover {
   color: #388E3C;
 }
+
+footer p {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
 
 /* Imagen de perfil y tarjeta */
 .profile-card {
