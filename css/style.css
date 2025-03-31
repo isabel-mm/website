@@ -127,8 +127,6 @@ footer a {
   white-space: nowrap;
 }
 
-}
-
 footer a:hover {
   color: #388E3C;
 }
@@ -290,8 +288,13 @@ p {
 
 /* Responsive */
 @media (max-width: 768px) {
-  nav a {
-    margin: 0 10px;
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a, .dropbtn {
+    margin: 5px 0;
   }
 
   .content {
@@ -302,5 +305,15 @@ p {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+
+  .dropdown-content {
+    position: static;
+    margin-top: 10px;
+    box-shadow: none;
+  }
+
+  .dropdown-content a {
+    padding: 8px 10px;
   }
 }
