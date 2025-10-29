@@ -24,9 +24,19 @@
       min-width: 600px;
     }
 
-    /* Sidebar */
+    /* Sidebar general */
     .sidebar {
       flex: 0 0 260px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      position: sticky;
+      top: 100px;
+      height: fit-content;
+    }
+
+    /* Tarjetas laterales */
+    .sidebar-box {
       background-color: #fff;
       border-left: 4px solid #D6CDEA;
       padding: 18px 16px;
@@ -34,14 +44,21 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       font-size: 0.9em;
       line-height: 1.6;
-      position: sticky;
-      top: 100px;
-      height: fit-content;
     }
 
-    .sidebar h3 {
+    /* WORK IN PROGRESS → verde */
+    .sidebar-box.work h3 {
       margin-top: 0;
-      color: #6B5B95;
+      color: #00A86B; /* tono verde */
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    /* RECENT → rosado */
+    .sidebar-box.recent h3 {
+      margin-top: 0;
+      color: #FF6F61;
       text-align: center;
       font-weight: bold;
       letter-spacing: 0.5px;
@@ -70,13 +87,12 @@
       }
       .sidebar {
         width: 100%;
+        position: static;
+      }
+      .sidebar-box {
         border-left: none;
         border-top: 3px solid #D6CDEA;
         box-shadow: none;
-        margin-top: 30px;
-      }
-      .content {
-        min-width: unset;
       }
     }
   </style>
@@ -150,12 +166,23 @@
 
       <!-- Sidebar -->
       <aside class="sidebar">
-        <h3>🚧 WORK IN PROGRESS</h3>
-        <ul>
-          <li><strong>TECLA</strong> — Terminology Extraction & Corpus Linguistic Analysis</li>
-          <li>Evaluación de modelos <strong>NER</strong> para detección terminológica</li>
-          <li>Capítulo 2 de la tesis: <em>Tecnologización de la Lingüística</em></li>
-        </ul>
+        <div class="sidebar-box work">
+          <h3>🛠️ WORK IN PROGRESS</h3>
+          <ul>
+            <li><strong>TECLA</strong> — Terminology Extraction & Corpus Linguistic Analysis</li>
+            <li>Evaluación de modelos <strong>NER</strong> para detección terminológica</li>
+            <li>Capítulo 2 de la tesis: <em>Tecnologización de la Lingüística</em></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-box recent">
+          <h3>🔬 RECENT</h3>
+          <ul>
+            <li>Publicación del dataset <strong>LingComp_QA</strong> en <em>Hugging Face</em></li>
+            <li>Lanzamiento de la app <strong>Dataset Creator</strong> para conversión de textos</li>
+            <li>Reestructuración del capítulo metodológico de la tesis</li>
+          </ul>
+        </div>
       </aside>
     </div>
 
